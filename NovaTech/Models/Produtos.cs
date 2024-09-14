@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace NovaTech.Models
+namespace NovaTech.Models;
 
     [Table("Produtos")]
     public class Produtos

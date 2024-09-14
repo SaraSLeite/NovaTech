@@ -1,14 +1,13 @@
 	using Microsoft.AspNetCore.Identity;
 	using Microsoft.EntityFrameworkCore;
 	using NovaTech.Data;
-	using NovaTech.Services;
+
             
     var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-string conexao = builder.Configuration
-.GetConnectionString("NovaTechConexao");
+string conexao = builder.Configuration.GetConnectionString("NovaTechConexao");
 			var versao = ServerVersion.AutoDetect(conexao);
 			builder.Services.AddDbContext<AppDbContext>(
 				opt => opt.UseMySql(conexao, versao)
