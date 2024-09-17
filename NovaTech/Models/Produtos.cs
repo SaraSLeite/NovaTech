@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace NovaTech.Models;
 
     [Table("Produtos")]
-    public class Produtos
+    public class Produto
     {
     
 	[Key]
@@ -13,11 +13,29 @@ namespace NovaTech.Models;
     public int Id { get; set; }
 
 	[Required]
-	[StringLength(30)]
+	[StringLength(255)]
 	public string Nome { get; set; }
 
     [Required]
-	[StringLength(25)]
+	[StringLength(255)]
 	public string Cor { get; set; }
+
+    [Required]
+	[StringLength(200)]
+	public string Categoria_id { get; set; }
+	[ForeignKey("Categoria_id")]
+	public Categoria Categoria { get; set; }
+
+    [Required]
+	[StringLength(1000)]
+	public string Descricao { get; set; }
+
+    [Required]
+	[StringLength(25)]
+	public string Preco { get; set; }
+
+    [Required]
+	[StringLength(25)]
+	public string Quantidade { get; set; }
 
     }

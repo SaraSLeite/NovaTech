@@ -36,15 +36,17 @@
 					</div>
 					<div class="col-lg-7 fs-5 mt-4">
 						<p class="mb-3"><strong>Descrição:</strong> @Model.Atual.Descricao</p>
-						<p class="mb-3"><strong>Gênero:</strong> @Model.Atual.Genero.Nome</p>
-						<p class="mb-3"><strong>Região:</strong> @Model.Atual.Regiao.Nome</p>
-						<p class="mb-3"><strong>Altura:</strong> @Model.Atual.Altura mts</p>
-						<p class="mb-3"><strong>Peso:</strong> @Model.Atual.Peso kgs</p>
+						<p class="mb-3"><strong>Gênero:</strong> @Model.Atual.Preco</p>
+						<p class="mb-3"><strong>Região:</strong> @Model.Atual.Categoria_id</p>
+						<p class="mb-3"><strong>Altura:</strong> @Model.Atual.Quantidade</p>
+						<p class="mb-3"><strong>Peso:</strong> @Model.Atual.Cor </p>
+						<p class="mb-3"><strong>Peso:</strong> @Model.Atual.Nome </p>
+
 						<p class="fw-bold">Tipo</p>
 						<div class="d-flex gap-2 my-2">
-							@foreach (var tipo in Model.Atual.Tipos)
+							@foreach (var tipo in Model.Atual.Categoria_id)
 							{
-								<a href="#" class="btn btn-lg text-white" style="background-color:@tipo.Tipo.Cor">@tipo.Tipo.Nome</a>
+								<a href="#" class="btn btn-lg text-white" style="background-color:@tipo.Categorias.Cor">@tipo.</a>
 							}
 						</div>
 					</div>

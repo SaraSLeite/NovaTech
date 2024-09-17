@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace NovaTech.Models;
 
 [Table("Categorias")]
-public class Tipo
+public class Categoria
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -14,7 +14,4 @@ public class Tipo
     [StringLength(30, ErrorMessage = "O nome deve possuir no máximo 30 caracteres")]
     public string Nome { get; set; }
 
-    [Required(ErrorMessage = "Informe a cor")]
-    [StringLength(25, ErrorMessage = "A Cor deve possuir no máximo 25 caracteres")]
-    public string Cor { get; set; }
 }

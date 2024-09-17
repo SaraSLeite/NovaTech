@@ -10,8 +10,8 @@ public class AppDbContext : DbContext
 	{
 	}
 
-	public DbSet<Produtos> Produtos { get; set; }
-	public DbSet<Categorias> Categorias { get; set; }
+	public DbSet<Produto> Produtos { get; set; }
+	public DbSet<Categoria> Categorias { get; set; }
 
 
 
