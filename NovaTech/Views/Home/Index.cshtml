@@ -30,21 +30,15 @@
 					@foreach (var produto in Model.Produtos)
 					{
 						<!-- Card Pokemon - Inicio -->
-						<div class="col poke @string.Join(' ', produto.Categoria_id.Select(t => t.Categoria_id.nome))">
+						<div class="col poke">
 							<a asp-action="Details" asp-route-id="@produto.Id" class="text-decoration-none">
-								<div class="card" style="background-color: @BackgroundColor(produto.Categorias.ToArray()[0].produto.Cor)">
+								<div class="card" style="background-color: @BackgroundColor(produto.Cor)">
 									<img src="@produto.Imagem" class="card-img-top" alt="@produto.Nome" />
 									<div class="card-body">
 										<h5 class="card-text mb-1 text-white">Nº @produto.Id.ToString("000")</h5>
 										<h3 class="card-title text-dark">@produto.Nome</h3>
 										<div class="d-flex justify-content-between align-items-center">
-											<div class="d-flex gap-2 my-2">
-												@foreach (var tipo in produto.Categoria_id)
-												{
-													<a href="#" class="btn text-white"
-														style="background-color:@produto.Categoria">@produto.Categoria.Nome</a>
-												}
-											</div>
+									
 										</div>
 									</div>
 								</div>

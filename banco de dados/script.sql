@@ -21,14 +21,15 @@ CREATE TABLE produtos (
     preco DECIMAL(10, 2) NOT NULL,
     quantidade INT NOT NULL,
     cor VARCHAR(50),
+    imagem VARCHAR(200),
     FOREIGN KEY (categoria_id) REFERENCES categorias(id)
 );
 
-INSERT INTO produtos (nome, categoria_id, descricao, preco, quantidade, cor) VALUES
-('iPhone 15', (SELECT id FROM categorias WHERE nome = 'Smartphone'), 'Último modelo da Apple com tela Super Retina XDR e chip A17 Bionic.', 999.99, 50, 'Azul'),
+INSERT INTO produtos (nome, categoria_id, descricao, preco, quantidade, cor, imagem) VALUES
+('iPhone 15', (SELECT id FROM categorias WHERE nome = 'Smartphone'), 'Último modelo da Apple com tela Super Retina XDR e chip A17 Bionic.', 999.99, 50, 'Azul', '/img/produtos/google.jpg'),
 ('Samsung Galaxy S24', (SELECT id FROM categorias WHERE nome = 'Smartphone'), 'Smartphone com tela Dynamic AMOLED 2X e câmera de 108 MP.', 899.99, 45, 'Azul'),
-('Google Pixel 8', (SELECT id FROM categorias WHERE nome = 'Smartphone'), 'Telefone com câmeras avançadas e o novo processador Google Tensor.', 799.99, 40, 'Azul'),
-('MacBook Air M2', (SELECT id FROM categorias WHERE nome = 'Notebook'), 'Notebook ultrafino da Apple com chip M2 e tela Retina.', 1199.99, 30, 'Prata'),
+('Google Pixel 8', (SELECT id FROM categorias WHERE nome = 'Smartphone'), 'Telefone com câmeras avançadas e o novo processador Google Tensor.', 799.99, 40, 'Azul', '/img/produtos/macbook.jpg'),
+('MacBook Air M2', (SELECT id FROM categorias WHERE nome = 'Notebook'), 'Notebook ultrafino da Apple com chip M2 e tela Retina.', 1199.99, 30, 'Prata', '/img/produtos/samsung.webp'),
 ('Dell XPS 13', (SELECT id FROM categorias WHERE nome = 'Notebook'), 'Laptop compacto com tela InfinityEdge e processador Intel Core i7.', 1299.99, 25, 'Prata'),
 ('Sony WH-1000XM5', (SELECT id FROM categorias WHERE nome = 'Fone de Ouvido'), 'Fones de ouvido com cancelamento de ruído ativo e qualidade de som premium.', 349.99, 20, 'Preto'),
 ('Bose QuietComfort 45', (SELECT id FROM categorias WHERE nome = 'Fone de Ouvido'), 'Fones de ouvido com excelente cancelamento de ruído e conforto prolongado.', 329.99, 15, 'Preto'),

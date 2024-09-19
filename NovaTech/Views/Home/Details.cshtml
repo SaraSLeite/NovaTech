@@ -41,14 +41,6 @@
 						<p class="mb-3"><strong>Altura:</strong> @Model.Atual.Quantidade</p>
 						<p class="mb-3"><strong>Peso:</strong> @Model.Atual.Cor </p>
 						<p class="mb-3"><strong>Peso:</strong> @Model.Atual.Nome </p>
-
-						<p class="fw-bold">Tipo</p>
-						<div class="d-flex gap-2 my-2">
-							@foreach (var tipo in Model.Atual.Categoria_id)
-							{
-								<a href="#" class="btn btn-lg text-white" style="background-color:@tipo.Categorias.Cor">@tipo.</a>
-							}
-						</div>
 					</div>
 				</div>
 			</div>
