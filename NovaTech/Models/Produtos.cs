@@ -21,8 +21,7 @@ namespace NovaTech.Models;
 	public string Cor { get; set; }
 
     [Required]
-	[StringLength(200)]
-	public string Categoria_id { get; set; }
+	public int Categoria_id { get; set; }
 	[ForeignKey("Categoria_id")]
 	public Categoria Categoria { get; set; }
 
@@ -31,11 +30,13 @@ namespace NovaTech.Models;
 	public string Descricao { get; set; }
 
     [Required]
-	[StringLength(25)]
-	public string Preco { get; set; }
+	public decimal Preco { get; set; }
 
     [Required]
-	[StringLength(25)]
-	public string Quantidade { get; set; }
+	public int Quantidade { get; set; }
+
+   [Required]
+	[StringLength(200)]
+	public string Imagem { get; set; }
 
     }
