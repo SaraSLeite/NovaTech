@@ -39,9 +39,15 @@ public class HomeController : Controller
             .SingleOrDefault();
         DetailsVM details = new()
         {
-            Atual = produto,
+                Atual = produto,
+            Anterior = _context.Produtos
+                .OrderByDescending(p => p.Id)
+                .FirstOrDefault(p =>p.Id < id),
+            Proximo = _context.Produtos
+                .OrderBy(p => p.Id)
+                .FirstOrDefault(p => p.Id >id) 
         };
-        return View(produto);
+        return View(details);
     }
 
     public IActionResult Privacy()
