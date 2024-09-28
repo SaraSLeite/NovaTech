@@ -25,6 +25,7 @@ public class HomeController : Controller
             Categorias = _context.Categorias.ToList(),
             Produtos = _context.Produtos
                 .Include(p => p.Categoria)
+                .OrderBy(p => p.Id)
                 .ToList()
         };
         return View(home);

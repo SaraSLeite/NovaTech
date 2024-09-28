@@ -32,7 +32,7 @@ INSERT INTO produtos (nome, categoria_id, descricao, preco, quantidade, cor, ima
 ('MacBook Air M2', (SELECT id FROM categorias WHERE nome = 'Notebook'), 'Notebook ultrafino da Apple com chip M2 e tela Retina.', 1199.99, 30, 'Prata', '/img/produtos/macbook.png'),
 ('Dell XPS 13', (SELECT id FROM categorias WHERE nome = 'Notebook'), 'Laptop compacto com tela InfinityEdge e processador Intel Core i7.', 1299.99, 25, 'Prata', '/img/produtos/dell.png'),
 ('Sony WH-1000XM5', (SELECT id FROM categorias WHERE nome = 'Fone de Ouvido'), 'Fones de ouvido com cancelamento de ruído ativo e qualidade de som premium.', 349.99, 20, 'Preto', '/img/produtos/sony.png'),
-('Bose QuietComfort 45', (SELECT id FROM categorias WHERE nome = 'Fone de Ouvido'), 'Fones de ouvido com excelente cancelamento de ruído e conforto prolongado.', 329.99, 15, 'Preto', '/img/produtos/bose.png'),
+('Bose QuietComfort', (SELECT id FROM categorias WHERE nome = 'Fone de Ouvido'), 'Fones de ouvido com excelente cancelamento de ruído e conforto prolongado.', 329.99, 15, 'Preto', '/img/produtos/bose.png'),
 ('Canon EOS R5', (SELECT id FROM categorias WHERE nome = 'Câmera'), 'Câmera mirrorless com resolução de 45 MP e capacidade de gravação em 8K.', 3899.99, 10, 'Vermelho', '/img/produtos/canon.png'),
 ('Sony Bravia XR', (SELECT id FROM categorias WHERE nome = 'TV'), 'Smart TV 4K com tecnologia OLED e sistema de som integrado.', 2499.99, 20, 'Cinza', '/img/produtos/bravia.png'),
 ('Samsung QLED 8K', (SELECT id FROM categorias WHERE nome = 'TV'), 'Televisor 8K QLED com qualidade de imagem superior e recursos inteligentes.', 3499.99, 15, 'Cinza', '/img/produtos/qled.png');
